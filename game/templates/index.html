@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>游戏查询</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <h1>游戏查询</h1>
+
+  <form id="queryForm">
+    <label for="tagsInput">标签：</label>
+    <input type="text" id="tagsInput" name="tags" placeholder="多个标签用逗号分隔">
+
+    <button type="submit" id="queryBtn">查询</button>
+  </form>
+
+  <div id="result"></div>
+
+  <button type="button" id="downloadBtn" disabled>下载</button>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}">
+    function showSuccessMessage(message) {
+    var messageDiv = document.createElement("div");
+    messageDiv.textContent = message;
+    messageDiv.style.position = "fixed";
+    messageDiv.style.top = "20px";
+    messageDiv.style.right = "20px";
+    messageDiv.style.backgroundColor = "#4caf50";
+    messageDiv.style.color = "#fff";
+    messageDiv.style.padding = "10px";
+    messageDiv.style.borderRadius = "3px";
+    messageDiv.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.3)";
+    messageDiv.style.zIndex = "9999";
+
+    document.body.appendChild(messageDiv);
+
+    setTimeout(function () {
+      document.body.removeChild(messageDiv);
+    }, 3000);
+  }
+  </script>
+</body>
+</html>

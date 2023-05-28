@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    width: 400px;
+    height: 26px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"], button[type="button"] {
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover, button[type="button"]:hover {
+    background-color: #3e8e41;
+}
+
+button[type="submit"]:active, button[type="button"]:active {
+    transform: scale(0.95);
+}
+
+#result {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#downloadBtn {
+    display: block;
+    margin: 0 auto;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: none;
+    background-color: gray;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#downloadBtn:hover {
+    background-color: #333;
+}
+
+#downloadBtn:active {
+    transform: scale(0.95);
+}
